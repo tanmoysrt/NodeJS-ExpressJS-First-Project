@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    {{>headerlinks}}
+</head>
+<body>
+    {{>header}}
+        <a>Enter your city name : </a>
+        <input type="text" name="city" value="{{cityname}}" id="city_name" required ><br>
+        <button id="submit_btn">Submit</button>
+
+
+    <a>Temperature : <p id="temperature">-</p>&deg;C</a>
+    {{>footer}}
+</body>
+</html>
