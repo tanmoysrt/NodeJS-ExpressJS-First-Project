@@ -3,7 +3,7 @@ const app = express();
 const path = require("path");
 const hbs = require('hbs');
 const requests = require('requests');
-const port = 8000;
+const port = process.env.PORT || 8000;
 
  
 const staticpath = path.join(__dirname,"..","public");
@@ -33,6 +33,6 @@ app.get('*',(req,res)=>{
     res.render("./views/404",{errorcomment:"404 Not found"})
 })
 
-app.listen(8000,()=>{
-    console.log("Listeing at port 8000");
-});
+app.listen(port,()=>{
+    console.log(`Listeing at port ${port}`);
+ });
